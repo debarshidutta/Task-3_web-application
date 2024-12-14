@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css"> <!-- Link to external stylesheet -->
+    <script src="script.js" defer></script> <!-- Link to external JavaScript file -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="Heading">
+            <h2>Contact Form</h2>
+            <h4>Please fill all the texts in the fields</h4>
+        </div>
+        <form id="Contact_form">
+            <div class="Name">
+                <label for="Name" class="in">Your Name:</label>
+                <br>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+            <div class="Email">
+                <label for="Email" class="in">Your Mail-Id:</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Valid E-mail Address" required>
+            </div>
+            <div class="Address">
+                <label for="Address" class="in">Your Address:</label>
+                <br>
+                <textarea name="address" id="address" cols="100" rows="10" placeholder="Address" required></textarea>
+            </div>
+            <div class="Phone Number">
+                <label for="phone" class="in">Your phone number:</label>
+                <br>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" required>
+            </div>
+            <div class="Message">
+                <label for="Message" class="in">Message (optional):</label>
+                <br>
+                <input type="text" id="message" name="message" placeholder="Your Message to Us">
+            </div>
+            <div class="Gender">
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="others" name="gender" value="others" required>
+                    <label for="others">Others</label>
+                </fieldset>
+            </div>
+            <div class="Subject">
+                <label for="Subject" class="in">Subject:</label>
+                <br>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="Submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

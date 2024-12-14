@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding: 100px;
+}
+
+.container {
+    padding: 5px;
+}
+
+/* Header */
+.Heading {
+    color: antiquewhite;
+    background-color: rgba(153, 198, 56, 0.681);
+    padding-left: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 22.5px;
+    box-shadow: 0 0 5px rgba(153, 198, 56, 0.681), 0 0 25px rgba(174, 255, 0, 0), 0 0 50px rgba(92, 147, 9, 0.681);
+}
+
+#Contact_form {
+    background-color: rgba(228, 228, 217, 0.53);
+    padding: 20px;
+    font-size: 20px;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 5px rgba(228, 228, 217, 0.019), 0 0 25px rgba(228, 228, 217, 0.019), 0 0 50px rgba(0, 0, 0, 0.4);
+}
+
+#Contact_form div {
+    padding-bottom: 25px;
+}
+
+#Contact_form input,
+textarea {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 9px;
+    border-style: none;
+    font-size: 19.2px;
+}
+
+#Contact_form input:focus,
+textarea:focus {
+    outline: none;
+    filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.4));
+}
+
+/* Gender Section Custom Radio Buttons */
+.Gender fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border: none;
+}
+
+.Gender fieldset input[type="radio"] {
+    display: none;
+}
+
+.Gender fieldset label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 20px;
+}
+
+/* Custom radio button */
+.Gender fieldset label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    /* Static size */
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Inner circle when checked */
+.Gender fieldset input[type="radio"]:checked+label:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+/* Hover effect */
+.Gender fieldset label:hover:before {
+    background-color: rgba(153, 198, 56, 0.3);
+}
+
+/* Submit Button */
+.Submit button {
+    border: none;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(153, 198, 56, 0.889);
+    border-radius: 7px;
+    font-weight: bolder;
+    color: white;
+    font-size: large;
+    transition: all 0.3s ease;
+}
+
+.Submit button:hover {
+    cursor: pointer;
+    background-color: rgb(124, 161, 45);
+    transition: all 0.59s ease;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        padding: 25px;
+    }
+
+    #Contact_form input,
+    textarea {
+        width: 95%;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 25px;
+        padding-bottom: 100px;
+        padding-top: 50px;
+    }
+    #Contact_form{
+        font-size: 18px;
+    }
+    #Contact_form input {
+        width: 95%;
+        height: 40px;
+        font-size: smaller;
+        border-radius: 5px;
+    }
+
+    #Contact_form textarea {
+        width: 95%;
+        height: 150px;
+        border-radius: 5px;
+        font-size: smaller;
+    }
+
+    .Gender fieldset label {
+        font-size: 18px;
+    }
+}
